@@ -1,0 +1,24 @@
+C: Preece outlines four steps for the general process of requirements engineering: data gathering, data analysis, interpretion, and presentation, task description, and task analysis. Data gathering is when you collect data by various methods such as interviews, focus groups, and questionnaires. Data analysis is when you use your collected data to brianstorm what your requirements are going to be. Then your task description stage is when you create scenarios, use cases, and essential use cases to create the description of your requirements. Then you finally use task analysis to make sure you have the correct and sufficient amount of requirements.
+B:
+PROJECT DRIVERS
+The purpose of this project is to translate legacy formats of emojis to their unicode formats.
+The stakeholders are: people who use the legacy format for emojis and the professors/TAs/graders of csse371.
+
+PROJECT CONSTRAINTS
+The list of emojis is on : http://unicode.org/emoji/charts/full-emoji-list.html.
+Assume the left most character of the legacy format is the top of the emoji.
+Assume that in the legacy format each emoji has a leading space and a trailing space (if it is not the last word)
+
+FUNCTIONAL REQUIREMENTS
+Translations will be stored in a HashMap format
+Output will be saved to the output file named in the command line arguments
+each line will be read into an array of strings before processing
+as each line is read from the standard input stream, when the array gets full, double it
+after the input stream has closed, prompt the user on the command line whether they want to read more from the stream
+
+NON-FUNCTIONAL REQUIREMENTS
+non-programmers should be able to easily add support for more emojis
+The input must be encoded in ASCII
+The output must be encoded in UTF-16
+
+A: Writing this emoji converter has alot to do with a course on requirements engineering because of the way it is written. We have alot of specific things specification states that we should have as well as a few things we do not know how to do including the format of the command line.

@@ -1,0 +1,4 @@
+EMOJI CONVERTER
+USER INTENTION                                  SYSTEM RESPONSIBILITY
+add new emoji                                   have a spot to add emoji
+convert emojis in legacy to unicode format      output all legacy emojis that are supported as unicode into a file
