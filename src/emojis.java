@@ -18,19 +18,28 @@ public class emojis {
 		String output = reader.next();
 		
 		reader.close();
+		
+		FileInputStream fistream = new FileInputStream("emojis.txt");
+		BufferedReader bur = new BufferedReader(new InputStreamReader(fistream));
+		
+		String strLine;
 
+		// To add additional supporting emojis, just add them to the file 
+		// emojis.txt in the format (legacy format),(unicode format). i.e. :),🙂
+		while((strLine = bur.readLine()) != null){
+			String[] trans = strLine.split(",");
+			emojiDict.put(trans[0], trans[1]);
+		}
+		
+		fistream.close();
+		bur.close();
+		
 		// Create input stream from input file
 		FileInputStream fstream = new FileInputStream(input);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-
-		// Add emojis to the dictionary
-		emojiDict.put(":)","🙂");
-		emojiDict.put(":(","☹");
-		// Add additonal emojis here in the format as in the above
 		
 		String[] lines = new String[2];
 		int length = 0;
-		String strLine;
 		
 		for(int i = 0; (strLine = br.readLine()) != null; i++) {
 			if(i == lines.length-1){
